@@ -1,0 +1,239 @@
+﻿{
+  "name": "IISKursovayaТовар",
+  "modelName": "i-i-s-kursovaya-товар",
+  "className": "Товар",
+  "nameSpace": "IIS.Kursovaya",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "изображение",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "кодТовара",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "наименование",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "свойства",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "цена",
+      "type": "decimal",
+      "flexberryType": "double",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "поставщик",
+      "relatedTo": "i-i-s-kursovaya-поставщик",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "производитель",
+      "relatedTo": "i-i-s-kursovaya-производитель",
+      "inverse": null
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ТоварE",
+      "modelName": "i-i-s-kursovaya-товар",
+      "attrs": [
+        {
+          "name": "кодТовара",
+          "caption": "Код товара",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "наименование",
+          "caption": "Наименование",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "изображение",
+          "caption": "Изображение",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "цена",
+          "caption": "Цена",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "свойства",
+          "caption": "Свойства",
+          "hidden": false,
+          "index": 4
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Производитель",
+          "lookupValueField": "производитель",
+          "relationName": "Производитель",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "производитель",
+              "caption": "Производитель",
+              "hidden": true,
+              "index": 6
+            }
+          ],
+          "index": 5,
+          "type": "standard",
+          "caption": "Производитель",
+          "name": "производитель",
+          "relatedTo": "i-i-s-kursovaya-производитель",
+          "inverse": null
+        },
+        {
+          "lookupValue": "Поствщик",
+          "lookupValueField": "поствщик",
+          "relationName": "Поставщик",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "поствщик",
+              "caption": "Поствщик",
+              "hidden": true,
+              "index": 8
+            }
+          ],
+          "index": 7,
+          "type": "standard",
+          "caption": "Поставщик",
+          "name": "поставщик",
+          "relatedTo": "i-i-s-kursovaya-поставщик",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "ТоварL",
+      "modelName": "i-i-s-kursovaya-товар",
+      "attrs": [
+        {
+          "name": "кодТовара",
+          "caption": "Код товара",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "наименование",
+          "caption": "Наименование",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "изображение",
+          "caption": "Изображение",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "цена",
+          "caption": "Цена",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "свойства",
+          "caption": "Свойства",
+          "hidden": false,
+          "index": 4
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Производитель",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "производитель",
+              "caption": "Производитель",
+              "hidden": false,
+              "index": 5
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Производитель",
+          "name": "производитель",
+          "relatedTo": "i-i-s-kursovaya-производитель",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Поставщик",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "поствщик",
+              "caption": "Поствщик",
+              "hidden": false,
+              "index": 6
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Поствщик",
+          "name": "поставщик",
+          "relatedTo": "i-i-s-kursovaya-поставщик",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

@@ -1,0 +1,96 @@
+﻿{
+  "name": "IISKursovayaПоставщик",
+  "modelName": "i-i-s-kursovaya-поставщик",
+  "className": "Поставщик",
+  "nameSpace": "IIS.Kursovaya",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "кодПоставщика",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "поствщик",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "телефон",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ПоставщикE",
+      "modelName": "i-i-s-kursovaya-поставщик",
+      "attrs": [
+        {
+          "name": "кодПоставщика",
+          "caption": "Код поставщика",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "поствщик",
+          "caption": "Поствщик",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "телефон",
+          "caption": "Телефон",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "ПоставщикL",
+      "modelName": "i-i-s-kursovaya-поставщик",
+      "attrs": [
+        {
+          "name": "кодПоставщика",
+          "caption": "Код поставщика",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "поствщик",
+          "caption": "Поствщик",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "телефон",
+          "caption": "Телефон",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

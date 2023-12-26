@@ -1,0 +1,78 @@
+﻿{
+  "name": "IISKursovayaСостояниеЗаказа",
+  "modelName": "i-i-s-kursovaya-состояние-заказа",
+  "className": "СостояниеЗаказа",
+  "nameSpace": "IIS.Kursovaya",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "дата",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "кодСостояния",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "статус",
+      "type": "i-i-s-kursovaya-статус-заказа",
+      "flexberryType": "СтатусЗаказа",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "заказ",
+      "relatedTo": "i-i-s-kursovaya-заказ",
+      "inverse": "состояниеЗаказа"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "СостояниеЗаказаE",
+      "modelName": "i-i-s-kursovaya-состояние-заказа",
+      "attrs": [
+        {
+          "name": "кодСостояния",
+          "caption": "Код состояния",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "дата",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "статус",
+          "caption": "Статус",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}
